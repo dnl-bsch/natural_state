@@ -36,7 +36,7 @@ def find_root(marker: str = "pyproject.toml") -> Path:
 ROOT = find_root()
 RAW = ROOT / "data" / "raw" / "vegetation" / "ODK Data Exports"
 ENT = ROOT / "data" / "raw" / "vegetation" / "Entity lists"
-OUT = ROOT / "data" / "raw" / "output" / "vegetation"
+OUT = ROOT / "data" / "output" / "vegetation"
 
 
 # %% [markdown]
@@ -643,5 +643,17 @@ ax.set(xlabel="longitude", ylabel="latitude", title="Registered transects, Lewa 
 ax.set_aspect(1 / np.cos(np.radians(viable["midpoint_lat"].mean())))
 ax.legend(fontsize=8, loc="lower left")
 fig.tight_layout()
+
+# %% [markdown]
+# ## 8. Write outputs
+
+# %%
+flags.to_csv(OUT / "flags.csv", index=False)
+flag_overview.to_csv(OUT / "flag_overview.csv", index=False)
+survey_summary.to_csv(OUT / "survey_summary.csv", index=False)
+plot_summary.round(3).to_csv(OUT / "plot_summary.csv", index=False)
+records.to_csv(OUT / "species_records.csv", index=False)
+design.to_csv(OUT / "sampling_design.csv")
+print("written to", OUT.relative_to(ROOT))
 
 # %%
