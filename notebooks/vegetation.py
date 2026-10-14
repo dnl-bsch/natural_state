@@ -490,4 +490,33 @@ flags = pd.DataFrame(flags)
 flag_overview = flags.groupby(["check_id", "severity", "check"]).size().rename("n_flags").reset_index()
 flag_overview
 
+# %% [markdown]
+# ## 4. Survey-level summary
+#
+# One row per submission, with the survey and quadrat flags it received.
+
+# %%
+quadrat_counts = quadrats.groupby("survey_key").agg(
+    quadrats=("quadrat_key", "size"),
+    quadrats_with_herbs=("herbs_present", lambda x: (x == "yes").sum()),
+)
+species_counts = records.groupby("survey_key").agg(
+    species_records=("resolved_name", "size"),
+    taxa=("resolved_name", "nunique"),
+)
+# Quadrat flags belong to the survey the quadrat is part of.
+flag_survey_key = flags["record_key"].map(quadrats.set_index("quadrat_key")["survey_key"]).fillna(flags["record_key"])
+survey_flags = flags.groupby(flag_survey_key)["check_id"].agg(lambda x: ", ".join(sorted(set(x))))
+
+survey_summary = (
+    surveys[["survey_key", "plot_name", "date", "recorder", "duration_min", "review_state"]]
+    .join(quadrat_counts, on="survey_key")
+    .join(species_counts, on="survey_key")
+    .assign(flags=lambda d: d["survey_key"].map(survey_flags).fillna(""))
+    .sort_values(["plot_name", "date"])
+    .reset_index(drop=True)
+)
+survey_summary["duration_min"] = survey_summary["duration_min"].round()
+survey_summary.drop(columns="survey_key").head()
+
 # %%
