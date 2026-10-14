@@ -552,4 +552,96 @@ plot_summary = (
 plot_summary.round(2).head()
 
 
+# %% [markdown]
+# ## 6. Sampling effort
+#
+# 1. **Was the design completed?** Planned, registered, not viable and surveyed plots per stratum.
+# 2. **Are 20 quadrats enough per plot?** Species accumulation over quadrats.
+# 3. **Are the plots enough for the project area?** Species accumulation over plots.
+#
+# An accumulation curve shows how many taxa have been seen after 1, 2, 3, … quadrats (or plots), averaged over
+# 200 random orderings. If the curve flattens, more sampling would add few new taxa.
+
+# %%
+surveyed_plots = surveys.loc[surveys["is_valid"], "plot_name"]
+design = (
+    centroids.assign(
+        registered=centroids["choice_name"].isin(plots["plot_name"]),
+        not_viable=centroids["choice_name"].isin(plots.loc[plots["is_viable"] != "yes", "plot_name"]),
+        surveyed=centroids["choice_name"].isin(surveyed_plots),
+    )
+    .groupby(["stratum_label", "sample_status"])
+    .agg(planned=("choice_name", "size"), registered=("registered", "sum"), not_viable=("not_viable", "sum"),
+         surveyed=("surveyed", "sum"))
+)
+design
+
+# %%
+QUADRATS_PER_PLOT = 20
+
+rng = np.random.default_rng(42)
+
+def accumulation(incidence, n_orderings=200):
+    """Mean number of taxa seen after 1, 2, ... rows of a presence/absence table, over random row orderings."""
+    present = incidence.to_numpy() > 0
+    curves = []
+    for _ in range(n_orderings):
+        shuffled = present[rng.permutation(len(present))]
+        seen_so_far = np.logical_or.accumulate(shuffled, axis=0)
+        curves.append(seen_so_far.sum(axis=1))
+    return np.mean(curves, axis=0)
+
+
+# Within plots: quadrat x taxon table per plot, keeping quadrats without any herbs.
+plot_curves = []
+for plot, qq in valid_quadrats.groupby("plot_name"):
+    recs = valid_records[valid_records["plot_name"] == plot]
+    incidence = pd.crosstab(recs["quadrat_key"], recs["resolved_name"]).reindex(qq["quadrat_key"], fill_value=0)
+    plot_curves.append(accumulation(incidence))
+
+# Project: plot x taxon table.
+plot_by_taxon = pd.crosstab(valid_records["plot_name"], valid_records["resolved_name"])
+project_curve = accumulation(plot_by_taxon)
+
+# How many new taxa the last quadrat / last plot adds: close to 0 means the curve has flattened.
+print(f"new taxa added by the 20th quadrat (mean of plots): {np.mean([c[-1] - c[-2] for c in plot_curves]):.2f}")
+print(f"project: {plot_by_taxon.shape[1]} taxa in {len(plot_by_taxon)} plots, "
+      f"last plot adds {project_curve[-1] - project_curve[-2]:.1f} taxa")
+
+fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+for curve in plot_curves:
+    axes[0].plot(range(1, len(curve) + 1), curve, color="#9bb0c9", lw=0.8)
+axes[0].plot(range(1, QUADRATS_PER_PLOT + 1), np.mean(plot_curves, axis=0), color="#1f3b5c", lw=2.5,
+             label="mean of plots")
+axes[0].set(xlabel="quadrats sampled", ylabel="taxa observed", title="Within plots: accumulation over quadrats")
+axes[0].legend()
+axes[1].plot(range(1, len(project_curve) + 1), project_curve, color="#1f3b5c", lw=2.5)
+axes[1].set(xlabel="plots sampled", ylabel="taxa observed", title="Project: accumulation over plots")
+fig.tight_layout()
+
+# %% [markdown]
+# ## 7. Map of transect locations
+
+# %%
+flagged_plots = set(flags.loc[flags["check_id"].isin(["P02", "P03"]), "plot_name"])
+outside_belt = set(flags.loc[flags["check_id"] == "Q01", "record_key"])
+viable = plots[plots["is_viable"] == "yes"]
+not_viable = plots[plots["is_viable"] != "yes"]
+
+fig, ax = plt.subplots(figsize=(9, 6))
+for _, r in viable.iterrows():
+    color = "#c0392b" if r["plot_name"] in flagged_plots else "#1f3b5c"
+    ax.plot([r["endpoint_a_lon"], r["midpoint_lon"], r["endpoint_b_lon"]],
+            [r["endpoint_a_lat"], r["midpoint_lat"], r["endpoint_b_lat"]], color=color, lw=2)
+    ax.annotate(r["plot_name"].split("_")[-1], (r["midpoint_lon"], r["midpoint_lat"]), fontsize=7,
+                xytext=(3, 3), textcoords="offset points")
+ax.scatter(not_viable["centroid_lon"], not_viable["centroid_lat"], marker="x", color="grey",
+           label="not viable (prescribed point)")
+ax.plot([], [], color="#1f3b5c", label="transect")
+ax.plot([], [], color="#c0392b", label="transect with geometry flag (P02/P03)")
+ax.set(xlabel="longitude", ylabel="latitude", title="Registered transects, Lewa (LW) baseline 2026")
+ax.set_aspect(1 / np.cos(np.radians(viable["midpoint_lat"].mean())))
+ax.legend(fontsize=8, loc="lower left")
+fig.tight_layout()
+
 # %%
