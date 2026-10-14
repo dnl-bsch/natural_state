@@ -364,27 +364,37 @@ records.groupby("source").agg(records=("quadrat_key", "size"), names=("resolved_
 #
 # Names typed in the field, or added during identification, are not checked against any taxonomy. The
 # project species list carries GBIF taxon keys, so the GBIF backbone is the natural reference. I match each
-# free-text name once with the GBIF species-match API and cache the answer, so the notebook also runs offline.
+# free-text name with the GBIF species-match API. This cell needs an internet connection.
 
 # %%
+# Names typed in the field that are not provisional codes like herb_007.
+is_free_text = (records["source"] != "species list") & ~records["is_unidentified"]
+free_text = sorted(records.loc[is_free_text, "resolved_name"].dropna().unique())
+free_text[:10]
 
 
-GBIF_CACHE = OUT / "gbif_name_matches.csv"
-free_text = sorted(
-    records.loc[(records["source"] != "species list") & ~records["is_unidentified"], "resolved_name"].dropna().unique()
-)
-cache = pd.read_csv(GBIF_CACHE) if GBIF_CACHE.exists() else pd.DataFrame(columns=["name"])
-todo = [n for n in free_text if n not in set(cache["name"])]
-rows = []
-for name in todo:
-    url = "https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": name, "kingdom": "Plantae"})
-    with urllib.request.urlopen(url, timeout=20) as r:
-        m = json.load(r)
-    rows.append({"name": name, "match_type": m.get("matchType"), "rank": m.get("rank"),
-                 "status": m.get("status"), "gbif_canonical": m.get("canonicalName"),
-                 "gbif_accepted": m.get("species"), "confidence": m.get("confidence")})
-if rows:
-    cache = pd.concat([cache, pd.DataFrame(rows)], ignore_index=True)
-    cache.to_csv(GBIF_CACHE, index=False)
-gbif = cache[cache["name"].isin(free_text)]
+# %%
+def match_gbif(name):
+    """Look up one plant name in the GBIF backbone taxonomy."""
+    query = urllib.parse.urlencode({"name": name, "kingdom": "Plantae"})
+    url = "https://api.gbif.org/v1/species/match?" + query
+    with urllib.request.urlopen(url, timeout=20) as response:
+        match = json.load(response)
+    return {
+        "name": name,
+        "match_type": match.get("matchType"),
+        "rank": match.get("rank"),
+        "status": match.get("status"),
+        "gbif_canonical": match.get("canonicalName"),
+        "gbif_accepted": match.get("species"),
+        "confidence": match.get("confidence"),
+    }
+
+
+gbif = pd.DataFrame([match_gbif(name) for name in free_text])
+gbif.head()
+
+# %%
 gbif["match_type"].value_counts()
+
+# %%
