@@ -519,4 +519,37 @@ survey_summary = (
 survey_summary["duration_min"] = survey_summary["duration_min"].round()
 survey_summary.drop(columns="survey_key").head()
 
+# %% [markdown]
+# ## 5. Plot-level summary
+#
+# Richness uses only non-rejected surveys. With presence/absence in 20 quadrats per plot, I report
+#
+# * **observed richness**: number of distinct taxa in the plot,
+# * **mean richness per quadrat**: average number of taxa in one quadrat, and
+
+# %%
+valid_records = records[records["is_valid"]].dropna(subset=["resolved_name"])
+valid_quadrats = quadrats[quadrats["is_valid"]]
+
+taxon_in_quadrat = valid_records.drop_duplicates(["quadrat_key", "resolved_name"])
+richness = pd.DataFrame({
+    "observed_richness": valid_records.groupby("plot_name")["resolved_name"].nunique(),
+    # empty quadrats count as 0, so divide by all quadrats of the plot
+    "mean_richness_per_quadrat": taxon_in_quadrat.groupby("plot_name").size() / valid_quadrats.groupby("plot_name").size(),
+})
+
+plot_flags = flags[flags["check_id"].str.startswith("P")].groupby("plot_name")["check_id"].agg(lambda x: ", ".join(sorted(x)))
+survey_counts = surveys.groupby("plot_name").agg(surveys=("survey_key", "size"), valid_surveys=("is_valid", "sum"))
+
+plot_summary = (
+    plots[["plot_name", "plot_status", "is_viable", "midpoint_shift_m", "a_to_mid_m", "b_to_mid_m", "bearing_deg"]]
+    .join(survey_counts, on="plot_name")
+    .join(richness, on="plot_name")
+    .assign(flags=lambda d: d["plot_name"].map(plot_flags).fillna(""))
+    .sort_values("plot_name")
+    .reset_index(drop=True)
+)
+plot_summary.round(2).head()
+
+
 # %%
