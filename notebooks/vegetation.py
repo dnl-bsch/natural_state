@@ -37,6 +37,8 @@ ROOT = find_root()
 RAW = ROOT / "data" / "raw" / "vegetation" / "ODK Data Exports"
 ENT = ROOT / "data" / "raw" / "vegetation" / "Entity lists"
 OUT = ROOT / "data" / "output" / "vegetation"
+FIGURES = OUT / "figures"
+FIGURES.mkdir(parents=True, exist_ok=True)
 
 
 # %% [markdown]
@@ -618,6 +620,7 @@ axes[0].legend()
 axes[1].plot(range(1, len(project_curve) + 1), project_curve, color="#1f3b5c", lw=2.5)
 axes[1].set(xlabel="plots sampled", ylabel="taxa observed", title="Project: accumulation over plots")
 fig.tight_layout()
+fig.savefig(FIGURES / "veg_species_accumulation.png", dpi=150)
 
 # %% [markdown]
 # ## 7. Map of transect locations
@@ -643,6 +646,7 @@ ax.set(xlabel="longitude", ylabel="latitude", title="Registered transects, Lewa 
 ax.set_aspect(1 / np.cos(np.radians(viable["midpoint_lat"].mean())))
 ax.legend(fontsize=8, loc="lower left")
 fig.tight_layout()
+fig.savefig(FIGURES / "veg_transect_map.png", dpi=150)
 
 # %% [markdown]
 # ## 8. Write outputs
