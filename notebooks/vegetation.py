@@ -397,4 +397,97 @@ gbif.head()
 # %%
 gbif["match_type"].value_counts()
 
+# %% [markdown]
+# ## 3. QA/QC checks
+#
+# Every check adds rows to one `flags` table: `check_id`, `severity`, `check`, `record_key` (the flagged record),
+# `plot_name` and `detail` (the observed value). I kept the checks that change how the data can be used:
+#
+# | ID | Check | Severity | Why it matters |
+# |---|---|---|---|
+# | S01 | Submission rejected in ODK review | info | excluded from all metrics |
+# | S02 | Plot surveyed twice in the same replicate | warning | would double count the plot |
+# | S05 | Survey duration outside 30–180 min | warning | rushed or interrupted survey |
+# | P01 | Plot registered as not viable | info | explains a missing plot |
+# | P02 | Midpoint more than 25 m from the prescribed point | error | plot is not where the design put it |
+# | P03 | Endpoint not 25 ± 10 m from the midpoint | warning | transect has the wrong length |
+# | P04 | Transect more than 45° off north–south | warning | SOP orientation not followed |
+# | Q01 | Quadrat more than 32.5 m from the midpoint | warning | quadrat outside the belt transect |
+# | Q04 | "Additional species present" but none recorded | error | species records are missing |
+# | T01 | Additional-species record without a species | error | species record is missing |
+# | T02 | Provisional species not yet identified | warning | richness counts a morphospecies |
+# | T03 | Free-text name has no exact species match in GBIF | warning | typos inflate richness |
+# | T06 | Woody species recorded in the herbaceous survey | warning | out of scope for this survey |
+#
+# Species checks (T02, T03, T06) give one flag per taxon per plot, so they can be filtered by plot.
+
+# %%
+# constants
+ENDPOINT_TOLERANCE_M = 10  # endpoint-midpoint distance accepted as 25 +/- 10 m (two GPS errors)
+SURVEY_MINUTES = (30, 180)  # plausible survey duration
+HALF_WIDTH_M = 2.5  # belt half-width
+GPS_ACCURACY_M = 5  # SOP: geopoints must be 5 m or better
+QUADRAT_MAX_DIST_M = HALF_LENGTH_M + HALF_WIDTH_M + GPS_ACCURACY_M  # 32.5 m from the midpoint
+MAX_BEARING_DEVIATION_DEG = 45  # SOP: transects laid out north-south; rotation allowed around obstacles
+
+
+flags = []
+
+
+def flag(check_id, severity, check, rows, key, detail_columns=()):
+    """Add one flag per row of `rows`. `detail_columns` are shown in the detail text with their values."""
+    for _, r in rows.iterrows():
+        values = [round(r[c], 1) if isinstance(r[c], float) else r[c] for c in detail_columns]
+        flags.append({"check_id": check_id, "severity": severity, "check": check, "record_key": r[key],
+                      "plot_name": r["plot_name"],
+                      "detail": ", ".join(f"{c} = {v}" for c, v in zip(detail_columns, values))})
+
+
+# Surveys
+s = surveys
+flag("S01", "info", "Submission rejected in ODK review", s[~s["is_valid"]], "survey_key", ["review_state"])
+flag("S02", "warning", "Plot surveyed more than once in the same replicate",
+     s[s.duplicated(["vegplot_id", "replicate"], keep=False)], "survey_key", ["date", "recorder"])
+flag("S05", "warning", f"Survey duration outside {SURVEY_MINUTES[0]}–{SURVEY_MINUTES[1]} min",
+     s[~s["duration_min"].between(*SURVEY_MINUTES)], "survey_key", ["duration_min"])
+
+# Plots
+p = plots
+flag("P01", "info", "Plot registered as not viable", p[p["is_viable"] != "yes"], "plot_uuid", ["not_viable_reason"])
+p = p[p["is_viable"] == "yes"]
+flag("P02", "error", f"Midpoint more than {MAX_MIDPOINT_SHIFT_M} m from the prescribed point",
+     p[p["midpoint_shift_m"] > MAX_MIDPOINT_SHIFT_M], "plot_uuid", ["midpoint_shift_m"])
+a_off = (p["a_to_mid_m"] - HALF_LENGTH_M).abs() > ENDPOINT_TOLERANCE_M
+b_off = (p["b_to_mid_m"] - HALF_LENGTH_M).abs() > ENDPOINT_TOLERANCE_M
+flag("P03", "warning", f"Endpoint not {HALF_LENGTH_M} ± {ENDPOINT_TOLERANCE_M} m from the midpoint",
+     p[a_off | b_off], "plot_uuid", ["a_to_mid_m", "b_to_mid_m"])
+flag("P04", "warning", f"Transect more than {MAX_BEARING_DEVIATION_DEG}° off north–south",
+     p[p["bearing_deviation_deg"] > MAX_BEARING_DEVIATION_DEG], "plot_uuid", ["bearing_deg"])
+
+# Quadrats
+q = quadrats
+flag("Q01", "warning", f"Quadrat more than {QUADRAT_MAX_DIST_M} m from the plot midpoint",
+     q[q["dist_to_midpoint_m"] > QUADRAT_MAX_DIST_M], "quadrat_key", ["quadrat_number", "dist_to_midpoint_m"])
+has_additional = q["quadrat_key"].isin(addsp_raw["PARENT_KEY"])
+flag("Q04", "error", "Additional species indicated but none recorded",
+     q[(q["additional_species_present"] == "yes") & ~has_additional], "quadrat_key", ["quadrat_number"])
+
+# Species
+r = records
+flag("T01", "error", "Additional-species record without a species",
+     r[(r["source"] != "species list") & r["entity_id"].isna()], "record_key", ["source"])
+taxa = records.dropna(subset=["resolved_name"]).drop_duplicates(["plot_name", "resolved_name"])  # taxon per plot
+flag("T02", "warning", "Provisional species not yet identified", taxa[taxa["is_unidentified"]], "resolved_name")
+not_exact = gbif[(gbif["match_type"] != "EXACT") | (gbif["rank"] != "SPECIES")]
+flag("T03", "warning", "Free-text name has no exact species match in GBIF",
+     taxa.merge(not_exact, left_on="resolved_name", right_on="name"), "resolved_name",
+     ["match_type", "gbif_canonical"])
+woody_names = species.loc[species["groups"] == "woody", "label"]
+is_woody = taxa["resolved_name"].isin(woody_names) | taxa["id_note"].str.contains("woody", case=False, na=False)
+flag("T06", "warning", "Woody species recorded in the herbaceous survey", taxa[is_woody], "resolved_name", ["id_note"])
+
+flags = pd.DataFrame(flags)
+flag_overview = flags.groupby(["check_id", "severity", "check"]).size().rename("n_flags").reset_index()
+flag_overview
+
 # %%
