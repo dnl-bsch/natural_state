@@ -886,7 +886,6 @@ name = "natural-state"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "jupytext" },
     { name = "matplotlib" },
     { name = "pandas" },
     { name = "statsmodels" },
@@ -895,6 +894,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "ipykernel" },
+    { name = "jupytext" },
     { name = "mypy" },
     { name = "pandas-stubs" },
     { name = "pytest" },
@@ -903,7 +903,6 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "jupytext", specifier = ">=1.19.6" },
     { name = "matplotlib", specifier = ">=3.11.2" },
     { name = "pandas", specifier = ">=3.0.6" },
     { name = "statsmodels", specifier = ">=0.15.0" },
@@ -912,6 +911,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "ipykernel", specifier = ">=7.4.0" },
+    { name = "jupytext", specifier = ">=1.19.6" },
     { name = "mypy", specifier = ">=2.4.0" },
     { name = "pandas-stubs" },
     { name = "pytest" },

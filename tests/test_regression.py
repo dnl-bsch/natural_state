@@ -39,7 +39,7 @@ def test_sensitivity_scales_the_logit() -> None:
 def test_threshold_reaches_the_target_probability() -> None:
     fit = LogisticFit(beta0=-1.0, beta1=2.0, p_slope=0.0, aic=0.0)
     threshold = fit.threshold(0.99)
-    assert fit.probability(np.array([threshold]))[0] == pytest.approx(0.99)
+    assert logistic(fit.beta0 + fit.beta1 * np.array([threshold]))[0] == pytest.approx(0.99)
 
 
 def test_threshold_matches_the_wood_and_kahl_formula() -> None:

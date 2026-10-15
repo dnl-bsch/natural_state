@@ -7,7 +7,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
 
-from natural_state.birds.regression import LogisticFit, to_logit
+from natural_state.birds.regression import logistic, to_logit
 from natural_state.birds.settings import Settings
 from natural_state.birds.thresholds import SpeciesThreshold, Status
 
@@ -55,11 +55,10 @@ def plot_calibration_curves(
 
         if result.status == Status.LOGISTIC_FIT:
             assert result.beta0 is not None and result.beta1 is not None
-            fit = LogisticFit(result.beta0, result.beta1, p_slope=np.nan, aic=np.nan)
             # Also cover high scores, so that a threshold above the validated range stays visible.
             low, high = to_logit(np.array([0.1, 0.9999]), settings.sensitivity, settings.clip)
             grid = np.linspace(low, high, 200)
-            ax.plot(grid, fit.probability(grid), color="black")
+            ax.plot(grid, logistic(result.beta0 + result.beta1 * grid), color="black")
         elif result.status == Status.SCORE_INDEPENDENT:
             assert result.precision_estimate is not None
             ax.hlines(result.precision_estimate, x.min(), x.max(), color="black")

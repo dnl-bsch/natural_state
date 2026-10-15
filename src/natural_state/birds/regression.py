@@ -96,21 +96,6 @@ class LogisticFit:
     p_slope: float
     aic: float
 
-    def probability(self, x: FloatArray) -> FloatArray:
-        """Probability that a prediction is correct, given its logit score.
-
-        Parameters
-        ----------
-        x : FloatArray
-            Logit scores.
-
-        Returns
-        -------
-        FloatArray
-            Probabilities between 0 and 1.
-        """
-        return logistic(self.beta0 + self.beta1 * x)
-
     def threshold(self, p: float) -> float:
         """Logit score at which the probability of a correct prediction equals ``p``.
 
