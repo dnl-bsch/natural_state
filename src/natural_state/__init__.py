@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from natural-state!")
+"""Natural State take-home project: data pipelines for vegetation and bird monitoring."""
