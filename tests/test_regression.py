@@ -3,7 +3,6 @@ import pytest
 
 from natural_state.birds.regression import (
     LogisticFit,
-    bootstrap_threshold_ci,
     fit_logistic,
     logistic,
     to_confidence,
@@ -62,23 +61,3 @@ def test_fit_finds_no_slope_when_outcome_ignores_the_score() -> None:
     x, y = simulate_validations(beta0=1.0, beta1=0.0, n=500)
     fit = fit_logistic(x, y)
     assert fit.p_slope > 0.05
-
-
-def test_bootstrap_interval_contains_the_threshold() -> None:
-    x, y = simulate_validations(beta0=-1.0, beta1=1.5, n=300)
-    fit = fit_logistic(x, y)
-    threshold = float(to_confidence(fit.threshold(0.99)))
-
-    low, high = bootstrap_threshold_ci(
-        x, y, p_target=0.99, sensitivity=1.0, n_bootstrap=200, rng=np.random.default_rng(0)
-    )
-    assert low <= threshold <= high
-
-
-def test_bootstrap_returns_nan_when_every_resample_is_skipped() -> None:
-    x = np.linspace(-2, 2, 20)
-    y = np.ones(20, dtype=np.int64)  # one outcome only, so no resample can be fitted
-    low, high = bootstrap_threshold_ci(
-        x, y, p_target=0.99, sensitivity=1.0, n_bootstrap=10, rng=np.random.default_rng(0)
-    )
-    assert np.isnan(low) and np.isnan(high)

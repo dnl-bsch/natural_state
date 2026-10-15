@@ -8,8 +8,6 @@ Usage, from the repository root:
 import argparse
 from pathlib import Path
 
-import numpy as np
-
 from natural_state.birds.data import load_predictions, load_validations
 from natural_state.birds.observations import label_predictions, summarise
 from natural_state.birds.plots import plot_calibration_curves
@@ -34,8 +32,7 @@ def run(raw_dir: Path, out_dir: Path, settings: Settings) -> None:
     predictions = load_predictions(raw_dir / "birdnet_predictions.csv", settings)
     validations = load_validations(raw_dir / "validation_results.csv", settings)
 
-    rng = np.random.default_rng(settings.seed)
-    results = species_thresholds(validations, predictions["common_name"], settings, rng)
+    results = species_thresholds(validations, predictions["common_name"], settings)
     thresholds = thresholds_table(results)
     labelled = label_predictions(predictions, thresholds, settings)
     summary = summarise(labelled, thresholds)
@@ -46,7 +43,7 @@ def run(raw_dir: Path, out_dir: Path, settings: Settings) -> None:
     labelled.to_csv(out_dir / "birdnet_predictions_with_observation.csv", index=False)
     summary.to_csv(out_dir / "observation_summary.csv")
 
-    fig = plot_calibration_curves(validations, results, settings, rng)
+    fig = plot_calibration_curves(validations, results, settings)
     fig.savefig(figures_dir / "bird_calibration_curves.png", dpi=150)
 
     print(summary.to_string())

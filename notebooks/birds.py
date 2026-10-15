@@ -33,8 +33,6 @@
 # %%
 from pathlib import Path
 
-import numpy as np
-
 from natural_state.birds.data import load_predictions, load_validations
 from natural_state.birds.observations import label_predictions, summarise
 from natural_state.birds.plots import plot_calibration_curves
@@ -45,7 +43,6 @@ ROOT = Path.cwd().parent if Path.cwd().name == "notebooks" else Path.cwd()
 RAW = ROOT / "data" / "raw" / "birds"
 
 settings = Settings()
-rng = np.random.default_rng(settings.seed)
 settings
 
 # %% [markdown]
@@ -111,7 +108,7 @@ print(match_rate.round(2).to_string())
 # it only makes the rule stricter, but it is flagged for review.
 
 # %%
-results = species_thresholds(validations, predictions["common_name"], settings, rng)
+results = species_thresholds(validations, predictions["common_name"], settings)
 thresholds = thresholds_table(results)
 thresholds.round(4)
 
@@ -119,11 +116,11 @@ thresholds.round(4)
 # ## 4. Visual check of the fitted curves
 #
 # x-axis: logit-transformed BirdNET score. y-axis: pr(BirdNET prediction is correct).
-# Points are the validated clips (jittered vertically). The dashed line is p = 0.99, and the red line is the
+# Points are the validated clips. The dashed line is p = 0.99, and the red line is the
 # confidence threshold used for the species.
 
 # %%
-fig = plot_calibration_curves(validations, results, settings, rng)
+fig = plot_calibration_curves(validations, results, settings)
 
 # %% [markdown]
 # ## 5. Assign observations to all predictions
@@ -135,3 +132,51 @@ fig = plot_calibration_curves(validations, results, settings, rng)
 # %%
 labelled = label_predictions(predictions, thresholds, settings)
 summarise(labelled, thresholds)
+
+# %% [markdown]
+# ## 6. The output files
+#
+# `uv run birds` (and `src/natural_state/birds/pipeline.py`) writes three CSVs to `data/output/birds/`.
+# They are three views of the same result: the rules (species level), the labelled data (prediction level) and an overview.
+#
+# ### `species_thresholds.csv`: the rules (one row per species)
+#
+# The decision for each species, as produced in section 3.
+#
+# | Column | Meaning |
+# |---|---|
+# | `common_name` | Species. |
+# | `status` | `logistic_fit`, `score_independent` or `insufficient_validation`. |
+# | `reason` | Why the status was chosen. It also flags extrapolated thresholds. |
+# | `n_validated`, `n_correct` | Number of validated clips and how many the ornithologist confirmed. |
+# | `min_validated_conf`, `max_validated_conf` | Score range covered by the validated clips. |
+# | `beta0`, `beta1` | Intercept and slope of the logistic fit on the logit score. |
+# | `p_slope`, `aic` | Significance of the slope and the model's AIC. |
+# | `logit_threshold` | Logit score where the curve reaches p = 0.99. |
+# | `confidence_threshold` | The same threshold on the BirdNET confidence scale (0-1). This is the cut-off that is applied. |
+# | `precision_estimate` | Only for `score_independent`: (k + 0.5) / (n + 1). |
+#
+# Fields that do not apply to a status are empty. For example, `score_independent` species have no `beta0` or `beta1`.
+#
+# ### `birdnet_predictions_with_observation.csv`: the labelled predictions (one row per prediction)
+#
+# The original `birdnet_predictions.csv` columns plus three new ones from section 5:
+#
+# | Column | Meaning |
+# |---|---|
+# | `p_correct` | Modelled probability that this prediction is correct. For `score_independent` species it is the same for every prediction of the species. Empty when there is no valid model. |
+# | `threshold_status` | The species' `status`, repeated per row. |
+# | `observation` | The species common name if the prediction is accepted (score at or above the threshold), otherwise empty. **This is the column to use downstream.** |
+#
+# ### `observation_summary.csv`: the overview (one row per species)
+#
+# The summary shown by `summarise()` in section 5.
+#
+# | Column | Meaning |
+# |---|---|
+# | `predictions` | Number of BirdNET predictions for the species. |
+# | `observations` | How many of them became observations. |
+# | `status`, `confidence_threshold` | Copied from `species_thresholds.csv`. |
+# | `share_accepted` | `observations / predictions`. |
+#
+# The `figures/` subfolder holds the calibration plots from section 4.

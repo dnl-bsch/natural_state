@@ -22,11 +22,10 @@ def plot_calibration_curves(
     validations: pd.DataFrame,
     results: list[SpeciesThreshold],
     settings: Settings,
-    rng: np.random.Generator,
 ) -> Figure:
     """Plot the validated clips and the fitted curve, one panel per validated species.
 
-    Points are the validated clips, jittered vertically so they do not overlap. The black line is the
+    Points are the validated clips, drawn at their exact outcome (0 or 1). The black line is the
     fitted probability that a prediction is correct. The dashed line is ``p_target``, and the red line is
     the confidence threshold used for the species.
 
@@ -38,8 +37,6 @@ def plot_calibration_curves(
         Threshold decisions. Species without validated clips are left out.
     settings : Settings
         Pipeline parameters.
-    rng : np.random.Generator
-        Random number generator for the vertical jitter.
 
     Returns
     -------
@@ -54,8 +51,7 @@ def plot_calibration_curves(
     for ax, result in zip(axes.flat, validated, strict=False):
         clips = validations[validations["commonName"] == result.common_name]
         x = to_logit(clips["confidence"].to_numpy(dtype=np.float64), settings.sensitivity, settings.clip)
-        jitter = rng.uniform(-0.03, 0.03, len(x))
-        ax.scatter(x, clips["outcome"] + jitter, s=12, alpha=0.4, color=POINT_COLOR)
+        ax.scatter(x, clips["outcome"], s=12, alpha=0.4, color=POINT_COLOR)
 
         if result.status == Status.LOGISTIC_FIT:
             assert result.beta0 is not None and result.beta1 is not None

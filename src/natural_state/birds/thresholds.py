@@ -22,7 +22,6 @@ import pandas as pd
 from natural_state.birds.regression import (
     FloatArray,
     IntArray,
-    bootstrap_threshold_ci,
     fit_logistic,
     to_confidence,
     to_logit,
@@ -79,8 +78,6 @@ class SpeciesThreshold:
     confidence_threshold : float or None
         Threshold on the confidence scale. Predictions at or above it become observations.
         None means no prediction of this species is accepted.
-    threshold_ci_low, threshold_ci_high : float or None
-        Bootstrap 95 % interval of the confidence threshold.
     precision_estimate : float or None
         Single precision estimate, for ``score_independent`` species.
     """
@@ -98,8 +95,6 @@ class SpeciesThreshold:
     aic: float | None = None
     logit_threshold: float | None = None
     confidence_threshold: float | None = None
-    threshold_ci_low: float | None = None
-    threshold_ci_high: float | None = None
     precision_estimate: float | None = None
 
 
@@ -129,7 +124,6 @@ def species_threshold(
     confidence: FloatArray,
     outcome: IntArray,
     settings: Settings,
-    rng: np.random.Generator,
 ) -> SpeciesThreshold:
     """Decide the threshold for one species from its validated clips.
 
@@ -143,8 +137,6 @@ def species_threshold(
         Outcomes of the validated clips: 1 if correct, 0 if not.
     settings : Settings
         Pipeline parameters.
-    rng : np.random.Generator
-        Random number generator for the bootstrap interval.
 
     Returns
     -------
@@ -187,9 +179,6 @@ def species_threshold(
     result.status = Status.LOGISTIC_FIT
     result.logit_threshold = fit.threshold(settings.p_target)
     result.confidence_threshold = float(to_confidence(result.logit_threshold, settings.sensitivity))
-    result.threshold_ci_low, result.threshold_ci_high = bootstrap_threshold_ci(
-        x, outcome, settings.p_target, settings.sensitivity, settings.n_bootstrap, rng
-    )
     if result.confidence_threshold > max_validated_conf:
         # Still applied, because it only makes the rule stricter. Flagged for review.
         result.reason = "threshold above highest validated score (extrapolated)"
@@ -231,7 +220,6 @@ def species_thresholds(
     validations: pd.DataFrame,
     predicted_species: Iterable[str],
     settings: Settings,
-    rng: np.random.Generator,
 ) -> list[SpeciesThreshold]:
     """Decide thresholds for every validated species and every predicted species.
 
@@ -245,8 +233,6 @@ def species_thresholds(
         Species names that appear in the predictions.
     settings : Settings
         Pipeline parameters.
-    rng : np.random.Generator
-        Random number generator for the bootstrap intervals.
 
     Returns
     -------
@@ -260,7 +246,6 @@ def species_thresholds(
             confidence=clips["confidence"].to_numpy(dtype=np.float64),
             outcome=clips["outcome"].to_numpy(dtype=np.int64),
             settings=settings,
-            rng=rng,
         )
         results.append(result)
 

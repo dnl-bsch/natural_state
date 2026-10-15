@@ -17,13 +17,9 @@ class Settings:
         Minimum number of validated clips before any threshold is set for a species.
     alpha : float
         Significance level for the test that the score is related to correctness.
-    n_bootstrap : int
-        Number of bootstrap resamples for the confidence interval of a threshold.
     clip : float
         Confidence is reported with 4 decimals. Clipping to ``[clip, 1 - clip]`` keeps the logit
         finite at 0 and 1.
-    seed : int
-        Random seed, so that bootstrap intervals and plot jitter are the same on every run.
     prediction_columns : frozenset of str
         Columns the predictions file must contain.
     validation_columns : frozenset of str
@@ -34,9 +30,7 @@ class Settings:
     sensitivity: float = 1.0
     min_validations: int = 50
     alpha: float = 0.05
-    n_bootstrap: int = 1000
     clip: float = 1e-4
-    seed: int = 42
     prediction_columns: frozenset[str] = frozenset(
         {"common_name", "species_code", "confidence", "begin_path", "begin_time_s"}
     )
