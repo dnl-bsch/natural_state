@@ -1,0 +1,14 @@
+check_id,severity,check,n_flags
+P01,info,Plot registered as not viable,1
+P02,error,Midpoint more than 25 m from the prescribed point,1
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,9
+P04,warning,Transect more than 45° off north–south,30
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,33
+Q04,error,Additional species indicated but none recorded,10
+S01,info,Submission rejected in ODK review,2
+S02,warning,Plot surveyed more than once in the same replicate,4
+S05,warning,Survey duration outside 30–180 min,3
+T01,error,Additional-species record without a species,1
+T02,warning,Provisional species not yet identified,92
+T03,warning,Free-text name has no exact species match in GBIF,82
+T06,warning,Woody species recorded in the herbaceous survey,1

@@ -1,0 +1,5 @@
+stratum_label,sample_status,planned,registered,not_viable,surveyed
+savanna,backup,10,1,0,1
+savanna,primary,30,30,1,29
+shrubland,backup,5,0,0,0
+shrubland,primary,6,0,0,0

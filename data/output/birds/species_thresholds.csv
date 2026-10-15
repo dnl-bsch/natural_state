@@ -1,0 +1,5 @@
+common_name,status,reason,n_validated,n_correct,min_validated_conf,max_validated_conf,beta0,beta1,p_slope,aic,logit_threshold,confidence_threshold,precision_estimate
+Abyssinian Nightjar,logistic_fit,,150,117,0.102,1.0,3.158998298707042,2.0722703149351913,2.887962768512333e-05,79.59034394412572,0.6930184450731083,0.6666380581669209,
+African Black-headed Oriole,score_independent,all validated clips correct; precision estimate 0.9967 ≥ 0.99,150,150,0.104,0.989,,,,,,0.104,0.9966887417218543
+Red-billed Firefinch,logistic_fit,threshold above highest validated score (extrapolated),101,6,0.101,0.907,-1.457778898616216,0.9422955371462725,0.034812406271087726,45.20266765156127,6.4235672463035485,0.9983797726298821,
+Three-banded Plover,score_independent,"slope not significantly positive (b1 = 0.55, p = 0.48); precision estimate 0.9901 ≥ 0.99",150,149,0.102,0.994,5.1703453607025285,0.5466863304534293,0.4761795124899013,15.231428586163462,,0.102,0.9900662251655629

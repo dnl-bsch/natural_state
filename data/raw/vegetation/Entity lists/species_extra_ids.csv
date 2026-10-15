@@ -1,0 +1,110 @@
+__id,label,species_number,species_name,notes,__createdAt,__creatorId,__creatorName,__updates,__updatedAt,__version
+85f0b76f-a57b-49dd-acc7-9ba3f1d63418,wood_005,wood_005,Unknown,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+f63f1807-fa73-4c31-9f30-edc015b9c647,wood_004,wood_004,Unknown,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+c407028c-57f4-45b0-a4bd-0daeed9910f4,Vachellia xanthophloea,wood_003,Vachellia xanthophloea,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+879b4a88-febb-4abc-b75b-3d471364c26d,wood_002,wood_002,Unknown,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+e3253640-e7b7-4f1c-96bc-46fa65fbbc74,wood_001,wood_001,Unknown,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+3a85799f-2794-4bff-943c-e486f989ddcd,Justicia divaricata,herb_104,Justicia divaricata,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+0a4ed943-0d23-40fb-b728-57c6990a5d4b,Canavalia rosea,herb_103,Canavalia rosea,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+efd3972f-4e92-4622-a575-4a86ee837942,Cyperus margaritaceus,herb_102,Cyperus margaritaceus,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+8211847c-7d6d-4c4b-8b7f-d0fa1a79cce8,Mollugo cerviana,herb_101,Mollugo cerviana,,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+b40333a4-19d6-447e-b1ab-18b7d382d400,herb_100,herb_100,Unknown,duplicate of wood_005 but below 40cm so should be excluded,2026-06-05T14:01:30.157Z,191,admin3@example.org,0,,1
+fbe6d6f3-2ce4-476c-a18d-ed799b6a9c24,Commelina africana,herb_099,Commelina africana,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+1136e793-3a91-404a-87a1-799c2588276a,Zornia glochidiala,herb_098,Zornia glochidiala,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+b4691f30-9894-467b-8288-6696c6827f99,herb_097,herb_097,Unknown,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+2d7f93f9-225c-4396-8e4e-1135458c6183,Tragus racemosa,herb_096,Tragus racemosa,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+2d0ef520-6ec1-4381-b87d-bc1251661102,Chloris virgata,herb_095,Chloris virgata,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+f0f1530d-b76f-4887-a243-bee81e8eef12,herb_094,herb_094,Unknown,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+c0d04683-e1fe-4797-9409-2e15ab2d7786,Evolvulus alsinoides,herb_093,Evolvulus alsinoides,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+4804e429-3904-4f84-bc29-53c6641b7d63,Ipomea leucanthemum,herb_092,Ipomea leucanthemum,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+a2cd8eab-c053-4d5b-8b1b-3b6fb5854da5,Hermannia eenii,herb_091,Hermannia eenii,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+6918af39-5630-4cf4-a3f8-4849f282ed3e,Xenostegia pinnata,herb_090,Xenostegia pinnata,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+bbf529e1-930f-469a-bbb0-fefa23cffb11,Brachiara dura,herb_089,Brachiara dura,,2026-06-05T14:01:30.155Z,191,admin3@example.org,0,,1
+71adff99-cdf7-4eff-8987-1a6f34957bec,Ipomea chloroneura,herb_088,Ipomea chloroneura,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+a7a8cfe8-697d-4d2b-bd10-6d033ac10035,herb_087,herb_087,Unknown,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+b392efe4-2663-461c-96f0-db363a047f5c,herb_086,herb_086,Unknown,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+2c818a06-819e-4df2-b68b-79f2b57b7e28,Euphorbia crotonoides,herb_085,Euphorbia crotonoides,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+d15b72a1-9454-443c-9a45-c72398e4f19e,Polygala erioptera,herb_084,Polygala erioptera,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+292d0198-5aeb-4bc9-99ed-ec13f12932ea,Pavonia clathrata,herb_083,Pavonia clathrata,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+43ee6a53-d3ed-43f9-831f-ddd38480c677,herb_082,herb_082,Unknown,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+44a14cea-beda-4673-baf1-a27a6fb4eeba,Crotolaria platysepala,herb_081,Crotolaria platysepala,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+76fc2006-2ad3-4496-8cf6-fa460f6d9bbb,Sida alba,herb_080,Sida alba,,2026-06-05T14:01:30.149Z,191,admin3@example.org,0,,1
+5f6010be-75f1-41be-b48b-8adc3acbd750,Setaria pumila,herb_079,Setaria pumila,,2026-06-05T14:01:30.145Z,191,admin3@example.org,0,,1
+a54b980b-c1c2-49bc-803b-c2b1915e3ae9,herb_078,herb_078,Unknown,,2026-06-05T14:01:30.145Z,191,admin3@example.org,0,,1
+1ebc4991-bf38-47e3-b882-2bf1885251d1,Chamaecrista absus,herb_077,Chamaecrista absus,,2026-06-05T14:01:30.145Z,191,admin3@example.org,0,,1
+6ac19c89-5090-40a6-8e22-bb0200b4c598,herb_076,herb_076,Unknown,,2026-06-05T14:01:30.145Z,191,admin3@example.org,0,,1
+2b8525ec-247c-4e6c-acc5-f0ab08f97041,Cenchrus bifloris,herb_075,Cenchrus bifloris,,2026-06-05T14:01:30.144Z,191,admin3@example.org,0,,1
+8ca41521-cb3e-43b3-9ee1-7b9c74986a9c,Hermbstaedtia linearis,herb_074,Hermbstaedtia linearis,,2026-06-05T14:01:30.144Z,191,admin3@example.org,0,,1
+c43a9f6d-749a-4226-9b80-06cc2972de11,Indigofera filipes,herb_073,Indigofera filipes,,2026-06-05T14:01:30.141Z,191,admin3@example.org,0,,1
+15f7b38d-3790-4bea-ab72-57cb9fb1f6ff,herb_036,herb_072,Unknown,duplicate of herb_036,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+d6912ca4-9086-4202-96d0-9af6e53a4e22,Rhus tenuinervis,herb_071,Rhus tenuinervis,woody but below 40cm so should be excluded,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+479ca0d3-1e48-4318-8357-54350ddf8817,Rhynchosia minima,herb_070,Rhynchosia minima,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+00101dc6-b16e-4971-acec-1990fe2ccd0b,Asparagus africanus,herb_069,Asparagus africanus,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+fc5701ba-fa34-42e4-8d5f-98defba0d668,herb_068,herb_068,Unknown,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+c653ff2c-46f0-491d-a115-ce4816b7e9b9,Aristida scabrivalvis,herb_067,Aristida scabrivalvis,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+1085539c-6472-464f-8691-873e3dfb7709,herb_066,herb_066,Unknown,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+b21bbfaf-5c0e-478b-b0ef-fd22d675af3b,Gisekia pharnaceoides,herb_065,Gisekia pharnaceoides,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+dba52dba-3677-48fc-872c-5acb05e7ff84,Ipomea sinensis,herb_064,Ipomea sinensis,,2026-06-05T14:01:30.140Z,191,admin3@example.org,0,,1
+74ac7950-d547-4a43-8817-0cebea1e8d3e,Sida chrysantha,herb_063,Sida chrysantha,,2026-06-05T14:01:30.139Z,191,admin3@example.org,0,,1
+57c33601-2ac2-4a05-9e06-f5cdb8a03a1c,Abutilon ramosum,herb_062,Abutilon ramosum,,2026-06-05T14:01:30.139Z,191,admin3@example.org,0,,1
+65d85b4a-82a7-43af-ae1c-285f07cfb1c7,herb_061,herb_061,Unknown,,2026-06-05T14:01:30.139Z,191,admin3@example.org,0,,1
+eb3512c5-c8de-4e04-b4e1-da8995a1dc95,Citrullus naudinianus,herb_060,Citrullus naudinianus,,2026-06-05T14:01:30.137Z,191,admin3@example.org,0,,1
+acd2043b-6515-4f1d-8559-81ee1477e875,Justicia divaricata,herb_059,Justicia divaricata,,2026-06-05T14:01:30.137Z,191,admin3@example.org,0,,1
+f22b65e8-2823-4967-9905-710059587b85,herb_058,herb_058,Unknown,duplicate of herb_011,2026-06-05T14:01:30.137Z,191,admin3@example.org,0,,1
+15af6052-003d-4fa7-a56f-9e7a49231af0,Erlangea misera,herb_057,Erlangea misera,,2026-06-05T14:01:30.135Z,191,admin3@example.org,0,,1
+7ced13f6-4d5a-439b-af1c-083be39f2243,herb_056,herb_056,Unknown,,2026-06-05T14:01:30.135Z,191,admin3@example.org,0,,1
+e3731c53-0343-4e93-b351-c2f8e2670d67,Tephrosia purpurea,herb_055,Tephrosia purpurea,,2026-06-05T14:01:30.135Z,191,admin3@example.org,0,,1
+c1301390-7c53-494a-9cd7-e8147a4a38b5,Sida rhombifolia,herb_054,Sida rhombifolia,,2026-06-05T14:01:30.135Z,191,admin3@example.org,0,,1
+b823ad89-cd21-4006-9376-c3cef1d15aed,Pechuel-loeschea leubnitziae,herb_053,Pechuel-loeschea leubnitziae,,2026-06-05T14:01:30.133Z,191,admin3@example.org,0,,1
+80679f4d-a94b-441f-8b6a-9e0138ae2624,Corchorus tridens,herb_052,Corchorus tridens,,2026-06-05T14:01:30.133Z,191,admin3@example.org,0,,1
+c67559ac-8e75-41e8-9de8-81e4eb42c5b1,Boerhavia coccinea,herb_051,Boerhavia coccinea,,2026-06-05T14:01:30.132Z,191,admin3@example.org,0,,1
+96b8da9c-dbed-43c1-8ee2-bb3ef29b84fc,Hibiscuc sidiformis,herb_050,Hibiscuc sidiformis,,2026-06-05T14:01:30.132Z,191,admin3@example.org,0,,1
+faba4faf-3757-4cf6-a94f-c818576ff3d0,Ipomea dichroa,herb_049,Ipomea dichroa,,2026-06-05T14:01:30.132Z,191,admin3@example.org,0,,1
+0019e813-3e6a-4242-9e57-e9e9ae7b9bf3,Thunbergia reticulata,herb_048,Thunbergia reticulata,,2026-06-05T14:01:30.128Z,191,admin3@example.org,0,,1
+6c51dce2-860b-44cb-8d21-f836b67ef56f,Panicum hirtum,herb_047,Panicum hirtum,,2026-06-05T14:01:30.128Z,191,admin3@example.org,0,,1
+8801c7f4-9014-4267-a561-64d97366fd05,Senna obtusifolia,herb_046,Senna obtusifolia,,2026-06-05T14:01:30.128Z,191,admin3@example.org,0,,1
+52ff48b9-1875-424e-a83e-448542630259,herb_045,herb_045,Unknown,,2026-06-05T14:01:30.127Z,191,admin3@example.org,0,,1
+6c57c94c-8f7a-427b-9f2b-39f839f8f524,Leucas lavandulifolia,herb_044,Leucas lavandulifolia,,2026-06-05T14:01:30.126Z,191,admin3@example.org,0,,1
+69cb395b-39c8-4bc5-a3fe-1b70e7a7f7b3,Striga gesnerioides,herb_043,Striga gesnerioides,,2026-06-05T14:01:30.116Z,191,admin3@example.org,0,,1
+13c5dd1c-6ba0-484f-bdfe-e3b8e6c27318,herb_042,herb_042,Unknown,,2026-06-05T14:01:30.116Z,191,admin3@example.org,0,,1
+85dbeaf9-696e-4b94-b9c4-434ddff2b5e3,Pogonarthria fleckii,herb_041,Pogonarthria fleckii,,2026-06-05T14:01:30.116Z,191,admin3@example.org,0,,1
+b954d2e4-75bd-435c-be5f-e06392b70b8d,Aristida scabrivalvis,herb_040,Aristida scabrivalvis,,2026-06-05T14:01:30.116Z,191,admin3@example.org,0,,1
+d66c5c7b-d403-4129-99e1-b819cbe2211d,herb_011,herb_039,Unknown,duplicate of herb_011,2026-06-05T14:01:30.116Z,191,admin3@example.org,0,,1
+49f501ea-de7e-45b5-92d4-b3f3fab829c5,herb_038,herb_038,Unknown,,2026-06-05T14:01:30.112Z,191,admin3@example.org,0,,1
+3028619d-4464-4464-b2d9-bee123012fe5,herb_037,herb_037,Unknown,,2026-06-05T14:01:30.112Z,191,admin3@example.org,0,,1
+35bfff4b-c0eb-4ab5-86c2-f15cdb42f55f,herb_036,herb_036,Unknown,,2026-06-05T14:01:30.112Z,191,admin3@example.org,0,,1
+9faefb7e-b617-4b60-95c8-8c855ecb4201,Eragrostis pilosa,herb_035,Eragrostis pilosa,,2026-06-05T14:01:30.111Z,191,admin3@example.org,0,,1
+dff0a776-2dc4-40b1-8f40-2108ae433720,herb_034,herb_034,Unknown,,2026-06-05T14:01:30.111Z,191,admin3@example.org,0,,1
+96936011-630f-42e2-bc0d-aed72726b233,herb_033,herb_033,Unknown,duplicate of herb_011,2026-06-05T14:01:30.111Z,191,admin3@example.org,0,,1
+a5a75aa3-3f80-4f70-86af-e0fd2a502cec,Rhynchosia minima,herb_032,Rhynchosia minima,,2026-06-05T14:01:30.111Z,191,admin3@example.org,0,,1
+5a99bb0a-19a2-4b10-be58-a9de5bfd9922,Crotolaria pisicarpa,herb_031,Crotolaria pisicarpa,,2026-06-05T14:01:30.111Z,191,admin3@example.org,0,,1
+0e681e35-35c3-4e6e-b49e-6b65d5d7456c,herb_030,herb_030,Unknown,,2026-06-05T14:01:30.110Z,191,admin3@example.org,0,,1
+fabef6ad-5e7b-4b6b-a8fd-60f1b94cd02c,Melosperma bracteatum,herb_029,Melosperma bracteatum,,2026-06-05T14:01:30.110Z,191,admin3@example.org,0,,1
+f77ff3ae-0b02-4049-b58b-c44c4cfc1f4e,Jacquemontia tamnifolia,herb_028,Jacquemontia tamnifolia,,2026-06-05T14:01:30.110Z,191,admin3@example.org,0,,1
+408db10c-70b9-4d75-9058-e11220ef4f16,Macrotyloma daltonii,herb_027,Macrotyloma daltonii,,2026-06-05T14:01:30.109Z,191,admin3@example.org,0,,1
+b00da8c6-7514-4320-9dff-7a56d0aad726,herb_026,herb_026,Unknown,,2026-06-05T14:01:30.109Z,191,admin3@example.org,0,,1
+cebbf83f-5e84-4edd-9827-fb5d64f8861d,Ipomea dichroa,herb_025,Ipomea dichroa,,2026-06-05T14:01:30.108Z,191,admin3@example.org,0,,1
+31c9fe3b-dc71-405d-9089-540f5b564b11,Leucas tettenesis,herb_024,Leucas tettenesis,,2026-06-05T14:01:30.105Z,191,admin3@example.org,0,,1
+8680a37d-70a3-49ab-903b-d8ccd484500a,Polygalaerioptera,herb_023,Polygalaerioptera,,2026-06-05T14:01:30.105Z,191,admin3@example.org,0,,1
+f20e0460-9b2f-4be5-9b37-f0561079fe51,Phyllanthus pentandrus,herb_022,Phyllanthus pentandrus,,2026-06-05T14:01:30.100Z,191,admin3@example.org,0,,1
+7ed5e921-86ad-4427-9189-49e6a4c06a40,Ipomea dichroa,herb_021,Ipomea dichroa,,2026-06-05T14:01:30.100Z,191,admin3@example.org,0,,1
+7e5b6afd-f62f-4bfd-b480-91920e0b7b49,Oldenladia corymbosa,herb_020,Oldenladia corymbosa,,2026-06-05T14:01:30.099Z,191,admin3@example.org,0,,1
+65ce680b-7f0b-4636-a809-0c023ad433d5,Ipomea dichroa,herb_019,Ipomea dichroa,,2026-06-05T14:01:30.099Z,191,admin3@example.org,0,,1
+dd2c2248-7398-47ef-a5f8-43a31dedb94b,Crotolaria heidmannii,herb_018,Crotolaria heidmannii,,2026-06-05T14:01:30.099Z,191,admin3@example.org,0,,1
+45d4758c-f6c0-4ffe-b939-a2973f9982b6,herb_017,herb_017,Unknown,,2026-06-05T14:01:30.098Z,191,admin3@example.org,0,,1
+6252ddc5-6569-46b5-ae16-0f8d7fb5f4a9,Cenchrus ciliaris,herb_016,Cenchrus ciliaris,,2026-06-05T14:01:30.098Z,191,admin3@example.org,0,,1
+2cba7862-bbc5-4294-838e-24743ec7b017,Rhynchosia totta,herb_015,Rhynchosia totta,,2026-06-05T14:01:30.098Z,191,admin3@example.org,0,,1
+82299701-cc3a-4b45-9383-1306fd62d3de,Crotolaria pisicarpa,herb_014,Crotolaria pisicarpa,,2026-06-05T14:01:30.094Z,191,admin3@example.org,0,,1
+b143c674-6c67-44db-80ad-5dd5fd524e33,Xenostegia tridentata,herb_013,Xenostegia tridentata,,2026-06-05T14:01:30.090Z,191,admin3@example.org,0,,1
+5b3c619d-15dc-4cf3-882d-f85bdca613f3,Blepharis maderaspatensis,herb_012,Blepharis maderaspatensis,,2026-06-05T14:01:30.085Z,191,admin3@example.org,0,,1
+08ce3351-6b44-447e-9b3a-b50a7fc54fa1,herb_011,herb_011,Unknown,,2026-06-05T14:01:30.085Z,191,admin3@example.org,0,,1
+8698b26d-fd82-461f-b0f4-7aa496029dd9,herb_010,herb_010,Unknown,,2026-06-05T14:01:30.084Z,191,admin3@example.org,0,,1
+d7f83f14-41d7-454e-9dfd-e409beddeb7b,Duosperma cretanum,herb_009,Duosperma cretanum,,2026-06-05T14:01:30.080Z,191,admin3@example.org,0,,1
+e2d39604-d0f8-4d45-96cc-24dac545b8af,Ocimum americanum,herb_008,Ocimum americanum,,2026-06-05T14:01:30.079Z,191,admin3@example.org,0,,1
+06e3e754-cf09-4b63-ae92-de988e56b629,Kyphocarpa angustifolia,herb_007,Kyphocarpa angustifolia,,2026-06-05T14:01:30.079Z,191,admin3@example.org,0,,1
+955eafb3-e62b-45e0-87f6-6ee5ae32da5b,Indigofera tinctoria,herb_006,Indigofera tinctoria,,2026-06-05T14:01:30.079Z,191,admin3@example.org,0,,1
+573d9e3a-e2b0-4783-85e1-e1ec04c381fa,Crotolaria sphaerocarpa,herb_005,Crotolaria sphaerocarpa,,2026-06-05T14:01:30.068Z,191,admin3@example.org,0,,1
+10dc742c-5af4-48df-b4a3-8837afa2b280,Tephrosia purpurea,herb_004,Tephrosia purpurea,,2026-06-05T14:01:30.068Z,191,admin3@example.org,0,,1
+1ecb7915-dec6-4241-a9e6-36230ed8f59d,Alectra orobanchoides,herb_003,Alectra orobanchoides,,2026-06-05T14:01:30.063Z,191,admin3@example.org,0,,1
+09980728-0120-473f-8fc3-ccd17560d962,herb_002,herb_002,Unknown,,2026-06-05T14:01:30.059Z,191,admin3@example.org,0,,1
+fddab749-ee00-4fac-bf63-3cb8146eb50b,Evolvulus alsinoides,herb_001,Evolvulus alsinoides,,2026-06-05T14:01:30.010Z,191,admin3@example.org,0,,1

@@ -1,0 +1,5 @@
+__id,label,project_abbr,survey_type_label,area_label,target_group,baseline_year,project_label,target_parent_taxon,__createdAt,__creatorId,__creatorName,__updates,__updatedAt,__version
+586215d7-a037-471f-9b4c-a866f8066278,savmon|lw|woody|ho,SAVMON,Human Observation,LW,woody,2026,Savanna Monitoring Pilot,plants,2026-05-15T09:19:18.301Z,573,admin1@example.org,2,2026-05-15T09:24:26.289Z,3
+858076d3-1f5a-4aad-b9ad-1205828807e0,savmon|lw|herbs|ho,SAVMON,Human Observation,LW,herbs,2026,Savanna Monitoring Pilot,plants,2026-05-15T09:19:18.236Z,573,admin1@example.org,2,2026-05-15T09:24:30.430Z,3
+7fbd7bcc-6ae6-45dd-b552-3e2fbefdb69d,savmon|lw|mammals|ct,SAVMON,Camera Trapping,LW,mammals,2026,Savanna Monitoring Pilot,vertebrates,2026-05-15T09:19:18.176Z,573,admin1@example.org,2,2026-05-15T09:24:34.276Z,3
+0e581cc2-56f8-4e68-affb-881f326e53bb,savmon|lw|birds|pam,SAVMON,Passive Acoustic Monitoring,LW,birds,2026,Savanna Monitoring Pilot,vertebrates,2026-05-15T09:19:18.112Z,573,admin1@example.org,2,2026-05-15T09:24:38.198Z,3

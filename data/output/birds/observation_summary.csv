@@ -1,0 +1,5 @@
+common_name,predictions,observations,status,confidence_threshold,share_accepted
+Abyssinian Nightjar,10187,3147,logistic_fit,0.6666380581669209,0.309
+African Black-headed Oriole,18054,17646,score_independent,0.104,0.977
+Red-billed Firefinch,235,0,logistic_fit,0.9983797726298821,0.0
+Three-banded Plover,1015,1001,score_independent,0.102,0.986

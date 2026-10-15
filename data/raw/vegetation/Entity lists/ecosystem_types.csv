@@ -1,0 +1,6 @@
+__id,label,choice_name,choice_status,__createdAt,__creatorId,__creatorName,__updates,__updatedAt,__version
+abdc5b1d-5f67-4cc8-8edf-301907e9860b,Grassland,grassland,active,2026-05-15T09:14:35.334Z,2684,svc-api@example.org,0,,1
+80886134-e51d-499a-a0ec-0231d5e3fcc7,Forest,forest,active,2026-05-15T09:14:35.334Z,2684,svc-api@example.org,0,,1
+b430f4a0-306d-47a3-84eb-5e661e0ce0eb,Scrub,scrub,active,2026-05-15T09:14:35.334Z,2684,svc-api@example.org,0,,1
+9d03d46a-bc72-4b2f-b8db-656e5dd428ac,Rocky Outcrop,rocky_outcrop,active,2026-05-15T09:14:35.334Z,2684,svc-api@example.org,0,,1
+ca1cc044-1f7d-4110-9f3d-f5473bf497a8,Riverine Area,riverine_area,active,2026-05-15T09:14:35.333Z,2684,svc-api@example.org,0,,1

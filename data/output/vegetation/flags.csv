@@ -1,0 +1,270 @@
+check_id,severity,check,record_key,plot_name,detail
+S01,info,Submission rejected in ODK review,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763,SavMon_LW_Plot_21,review_state = rejected
+S01,info,Submission rejected in ODK review,uuid:81e3bc36-700f-465d-a1aa-48ebed04a78c,SavMon_LW_Plot_18,review_state = rejected
+S02,warning,Plot surveyed more than once in the same replicate,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763,SavMon_LW_Plot_21,"date = 2026-05-26, recorder = Sam"
+S02,warning,Plot surveyed more than once in the same replicate,uuid:49d73df9-2d36-4a1e-aa29-6f94f23a7513,SavMon_LW_Plot_21,"date = 2026-05-26, recorder = Grace"
+S02,warning,Plot surveyed more than once in the same replicate,uuid:cf362fbc-991a-4db1-8d49-6c1d29fd49c8,SavMon_LW_Plot_18,"date = 2026-05-26, recorder = Grace"
+S02,warning,Plot surveyed more than once in the same replicate,uuid:81e3bc36-700f-465d-a1aa-48ebed04a78c,SavMon_LW_Plot_18,"date = 2026-05-26, recorder = Grace"
+S05,warning,Survey duration outside 30–180 min,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763,SavMon_LW_Plot_21,duration_min = 24.5
+S05,warning,Survey duration outside 30–180 min,uuid:81e3bc36-700f-465d-a1aa-48ebed04a78c,SavMon_LW_Plot_18,duration_min = 26.0
+S05,warning,Survey duration outside 30–180 min,uuid:359a5da6-d237-4203-b838-8596bdbd4935,SavMon_LW_Plot_08,duration_min = 236.0
+P01,info,Plot registered as not viable,b4bc7234-ca9b-4aeb-81ea-4fc30142306d,SavMon_LW_Plot_23,not_viable_reason = On private property
+P02,error,Midpoint more than 25 m from the prescribed point,af3dc968-e531-4f35-894a-a57c843c3a9a,SavMon_LW_Plot_14,midpoint_shift_m = 33.5
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,d20f4c50-e5e8-46d7-9b55-2228ff5f92fb,SavMon_LW_Plot_15,"a_to_mid_m = 46.5, b_to_mid_m = 23.2"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,8ec46daa-1087-4d15-b103-f34f36089718,SavMon_LW_Plot_13,"a_to_mid_m = 39.7, b_to_mid_m = 20.7"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,660f5446-1622-40f1-b3b0-0d2dcf623530,SavMon_LW_Plot_19,"a_to_mid_m = 14.9, b_to_mid_m = 8.1"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,b58271e9-c6d1-44f9-9286-0245b2e30a69,SavMon_LW_Plot_27,"a_to_mid_m = 29.3, b_to_mid_m = 3.9"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,af3dc968-e531-4f35-894a-a57c843c3a9a,SavMon_LW_Plot_14,"a_to_mid_m = 10.8, b_to_mid_m = 33.5"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,8c172f11-fdb2-47bf-8c0b-1f34cd071afb,SavMon_LW_Plot_30,"a_to_mid_m = 40.5, b_to_mid_m = 12.4"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,810aa56e-e50a-44ab-9ab8-42d1552c349a,SavMon_LW_Plot_03,"a_to_mid_m = 37.0, b_to_mid_m = 20.8"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,042bc8a0-b02c-4046-bd2e-4efb8a8d655d,SavMon_LW_Plot_22,"a_to_mid_m = 23.1, b_to_mid_m = 47.3"
+P03,warning,Endpoint not 25 ± 10 m from the midpoint,887b967e-cfda-42f9-9762-85838f49c6c7,SavMon_LW_Plot_12,"a_to_mid_m = 11.4, b_to_mid_m = 30.5"
+P04,warning,Transect more than 45° off north–south,40b5b142-18e5-45da-afa8-4837f520f2cf,SavMon_LW_Plot_16,bearing_deg = 100.3
+P04,warning,Transect more than 45° off north–south,d5645424-6bd7-4ccb-8c86-821984f00e5c,SavMon_LW_Plot_11,bearing_deg = 107.8
+P04,warning,Transect more than 45° off north–south,5fc30b9c-edc3-410d-8eb9-e9eceb8526dc,SavMon_LW_Plot_29,bearing_deg = 104.9
+P04,warning,Transect more than 45° off north–south,da09c7a5-a9ba-49c8-9e74-7d262e6b7eb4,SavMon_LW_Plot_21,bearing_deg = 97.7
+P04,warning,Transect more than 45° off north–south,477053f7-b110-411b-abe4-5b6aadf57ab0,SavMon_LW_Plot_18,bearing_deg = 113.5
+P04,warning,Transect more than 45° off north–south,9c3b305a-542d-4b5c-ad4d-fd1ca26cf5a4,SavMon_LW_Plot_25,bearing_deg = 96.2
+P04,warning,Transect more than 45° off north–south,eab2feb8-72b1-491f-9223-ad5285d2d6db,SavMon_LW_Plot_04,bearing_deg = 109.4
+P04,warning,Transect more than 45° off north–south,a9736eb5-344d-4615-8f2e-e73f38e4e124,SavMon_LW_Plot_07,bearing_deg = 85.4
+P04,warning,Transect more than 45° off north–south,d20f4c50-e5e8-46d7-9b55-2228ff5f92fb,SavMon_LW_Plot_15,bearing_deg = 95.8
+P04,warning,Transect more than 45° off north–south,fd58af75-587c-4635-a7ca-1fd24ee00b2f,SavMon_LW_Plot_20,bearing_deg = 104.8
+P04,warning,Transect more than 45° off north–south,b3abd35a-ee0e-4149-86b8-c0d41dc545b8,SavMon_LW_Plot_24,bearing_deg = 93.1
+P04,warning,Transect more than 45° off north–south,449006e8-3cda-4659-b7db-b892d3aa0320,SavMon_LW_Plot_02,bearing_deg = 102.6
+P04,warning,Transect more than 45° off north–south,199afebb-92ab-4fa5-bda0-b3ff4d3f6c4c,SavMon_LW_Plot_28,bearing_deg = 117.7
+P04,warning,Transect more than 45° off north–south,1de06e5f-ffea-4859-a9ea-d8892e47a9bf,SavMon_LW_Plot_01,bearing_deg = 130.5
+P04,warning,Transect more than 45° off north–south,8ec46daa-1087-4d15-b103-f34f36089718,SavMon_LW_Plot_13,bearing_deg = 78.5
+P04,warning,Transect more than 45° off north–south,1d979a81-a11a-43de-85de-7367754879ba,SavMon_LW_Plot_17,bearing_deg = 82.0
+P04,warning,Transect more than 45° off north–south,6af30a65-e02d-41ca-ad67-c426c219db54,SavMon_LW_Plot_06,bearing_deg = 106.0
+P04,warning,Transect more than 45° off north–south,9b4a3681-b610-42f8-abbe-a5fb4da4892a,SavMon_LW_Plot_46,bearing_deg = 101.6
+P04,warning,Transect more than 45° off north–south,660f5446-1622-40f1-b3b0-0d2dcf623530,SavMon_LW_Plot_19,bearing_deg = 60.2
+P04,warning,Transect more than 45° off north–south,b58271e9-c6d1-44f9-9286-0245b2e30a69,SavMon_LW_Plot_27,bearing_deg = 56.6
+P04,warning,Transect more than 45° off north–south,fb648edf-3606-4436-8f7d-9e8083e47744,SavMon_LW_Plot_26,bearing_deg = 112.5
+P04,warning,Transect more than 45° off north–south,68a92b1d-cd91-42f8-a4ac-582d2b2d3e30,SavMon_LW_Plot_05,bearing_deg = 116.5
+P04,warning,Transect more than 45° off north–south,0dc3e2bd-b285-42d5-b047-ac5172a3b61b,SavMon_LW_Plot_09,bearing_deg = 78.0
+P04,warning,Transect more than 45° off north–south,af3dc968-e531-4f35-894a-a57c843c3a9a,SavMon_LW_Plot_14,bearing_deg = 90.7
+P04,warning,Transect more than 45° off north–south,9dd50ef0-e5d2-4897-b6db-0c5804373b86,SavMon_LW_Plot_10,bearing_deg = 109.1
+P04,warning,Transect more than 45° off north–south,8c172f11-fdb2-47bf-8c0b-1f34cd071afb,SavMon_LW_Plot_30,bearing_deg = 109.9
+P04,warning,Transect more than 45° off north–south,810aa56e-e50a-44ab-9ab8-42d1552c349a,SavMon_LW_Plot_03,bearing_deg = 106.8
+P04,warning,Transect more than 45° off north–south,042bc8a0-b02c-4046-bd2e-4efb8a8d655d,SavMon_LW_Plot_22,bearing_deg = 49.8
+P04,warning,Transect more than 45° off north–south,887b967e-cfda-42f9-9762-85838f49c6c7,SavMon_LW_Plot_12,bearing_deg = 122.7
+P04,warning,Transect more than 45° off north–south,1920716b-0cc6-42b0-8ebf-90ece20050df,SavMon_LW_Plot_08,bearing_deg = 111.8
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763/observations/quadrat_repeat[10],SavMon_LW_Plot_21,"quadrat_number = 10, dist_to_midpoint_m = 35.1"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763/observations/quadrat_repeat[11],SavMon_LW_Plot_21,"quadrat_number = 11, dist_to_midpoint_m = 37.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:49d73df9-2d36-4a1e-aa29-6f94f23a7513/observations/quadrat_repeat[10],SavMon_LW_Plot_21,"quadrat_number = 10, dist_to_midpoint_m = 38.7"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:9e1251bb-84c1-4b7a-a8bb-bafcf7afc82c/observations/quadrat_repeat[4],SavMon_LW_Plot_11,"quadrat_number = 4, dist_to_midpoint_m = 50.8"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:8e5f5c9d-d697-4358-b766-db4a41f28c3e/observations/quadrat_repeat[1],SavMon_LW_Plot_25,"quadrat_number = 1, dist_to_midpoint_m = 38.0"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:4137458f-31e5-4355-b4ad-47858fb11503/observations/quadrat_repeat[1],SavMon_LW_Plot_04,"quadrat_number = 1, dist_to_midpoint_m = 39.8"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:4137458f-31e5-4355-b4ad-47858fb11503/observations/quadrat_repeat[3],SavMon_LW_Plot_04,"quadrat_number = 3, dist_to_midpoint_m = 33.0"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:54452130-d92e-4996-a0d7-9401811b9ed7/observations/quadrat_repeat[10],SavMon_LW_Plot_15,"quadrat_number = 10, dist_to_midpoint_m = 33.6"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:54452130-d92e-4996-a0d7-9401811b9ed7/observations/quadrat_repeat[11],SavMon_LW_Plot_15,"quadrat_number = 11, dist_to_midpoint_m = 34.2"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:e63b6ad6-7893-4cca-a1db-00fbde18a2aa/observations/quadrat_repeat[10],SavMon_LW_Plot_02,"quadrat_number = 10, dist_to_midpoint_m = 35.8"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:9fd08bb2-7c3f-49f5-8ad8-dd6f45da94da/observations/quadrat_repeat[9],SavMon_LW_Plot_01,"quadrat_number = 9, dist_to_midpoint_m = 35.9"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:9fd08bb2-7c3f-49f5-8ad8-dd6f45da94da/observations/quadrat_repeat[18],SavMon_LW_Plot_01,"quadrat_number = 18, dist_to_midpoint_m = 74.6"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:7ae61d55-3663-422e-aad2-9104b56c9a47/observations/quadrat_repeat[1],SavMon_LW_Plot_06,"quadrat_number = 1, dist_to_midpoint_m = 34.5"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:9ec95900-d4e8-4825-be75-07834b98cc6c/observations/quadrat_repeat[3],SavMon_LW_Plot_19,"quadrat_number = 3, dist_to_midpoint_m = 47.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:2439f628-f86d-4770-98d1-ae7b99a4d91f/observations/quadrat_repeat[11],SavMon_LW_Plot_26,"quadrat_number = 11, dist_to_midpoint_m = 34.4"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:2439f628-f86d-4770-98d1-ae7b99a4d91f/observations/quadrat_repeat[20],SavMon_LW_Plot_26,"quadrat_number = 20, dist_to_midpoint_m = 32.7"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[1],SavMon_LW_Plot_05,"quadrat_number = 1, dist_to_midpoint_m = 42.4"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[2],SavMon_LW_Plot_05,"quadrat_number = 2, dist_to_midpoint_m = 42.1"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[3],SavMon_LW_Plot_05,"quadrat_number = 3, dist_to_midpoint_m = 38.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[4],SavMon_LW_Plot_05,"quadrat_number = 4, dist_to_midpoint_m = 37.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[19],SavMon_LW_Plot_05,"quadrat_number = 19, dist_to_midpoint_m = 34.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:5d242bf2-8888-4eb0-9082-431482177425/observations/quadrat_repeat[20],SavMon_LW_Plot_05,"quadrat_number = 20, dist_to_midpoint_m = 43.5"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:95cde0b4-8b49-4f5d-a3c7-6765e1c06466/observations/quadrat_repeat[10],SavMon_LW_Plot_09,"quadrat_number = 10, dist_to_midpoint_m = 39.6"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:c17516f9-53dd-4fda-b4e6-e257068198b9/observations/quadrat_repeat[1],SavMon_LW_Plot_30,"quadrat_number = 1, dist_to_midpoint_m = 43.4"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:c17516f9-53dd-4fda-b4e6-e257068198b9/observations/quadrat_repeat[2],SavMon_LW_Plot_30,"quadrat_number = 2, dist_to_midpoint_m = 37.0"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:c17516f9-53dd-4fda-b4e6-e257068198b9/observations/quadrat_repeat[20],SavMon_LW_Plot_30,"quadrat_number = 20, dist_to_midpoint_m = 36.7"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:967cb42c-f21a-4ba6-92be-81cd6d2b0e8d/observations/quadrat_repeat[1],SavMon_LW_Plot_03,"quadrat_number = 1, dist_to_midpoint_m = 40.0"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:ce4f999d-8849-42a9-a870-1205d47b1903/observations/quadrat_repeat[8],SavMon_LW_Plot_22,"quadrat_number = 8, dist_to_midpoint_m = 37.9"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:ce4f999d-8849-42a9-a870-1205d47b1903/observations/quadrat_repeat[11],SavMon_LW_Plot_22,"quadrat_number = 11, dist_to_midpoint_m = 45.9"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:ce4f999d-8849-42a9-a870-1205d47b1903/observations/quadrat_repeat[12],SavMon_LW_Plot_22,"quadrat_number = 12, dist_to_midpoint_m = 33.7"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:ce4f999d-8849-42a9-a870-1205d47b1903/observations/quadrat_repeat[14],SavMon_LW_Plot_22,"quadrat_number = 14, dist_to_midpoint_m = 33.3"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:e7de35f0-a715-47f1-885f-fd5a0d9a2907/observations/quadrat_repeat[10],SavMon_LW_Plot_12,"quadrat_number = 10, dist_to_midpoint_m = 32.9"
+Q01,warning,Quadrat more than 32.5 m from the plot midpoint,uuid:e7de35f0-a715-47f1-885f-fd5a0d9a2907/observations/quadrat_repeat[20],SavMon_LW_Plot_12,"quadrat_number = 20, dist_to_midpoint_m = 34.4"
+Q04,error,Additional species indicated but none recorded,uuid:c6cc7231-7af6-4bc5-b281-565c53f21763/observations/quadrat_repeat[19],SavMon_LW_Plot_21,quadrat_number = 19
+Q04,error,Additional species indicated but none recorded,uuid:938c15e5-c942-49aa-8e6d-9633189870ff/observations/quadrat_repeat[2],SavMon_LW_Plot_29,quadrat_number = 2
+Q04,error,Additional species indicated but none recorded,uuid:54452130-d92e-4996-a0d7-9401811b9ed7/observations/quadrat_repeat[17],SavMon_LW_Plot_15,quadrat_number = 17
+Q04,error,Additional species indicated but none recorded,uuid:dae71a1b-a6f9-4a6d-a7e5-8ffbb89fad6f/observations/quadrat_repeat[5],SavMon_LW_Plot_46,quadrat_number = 5
+Q04,error,Additional species indicated but none recorded,uuid:dae71a1b-a6f9-4a6d-a7e5-8ffbb89fad6f/observations/quadrat_repeat[13],SavMon_LW_Plot_46,quadrat_number = 13
+Q04,error,Additional species indicated but none recorded,uuid:dae71a1b-a6f9-4a6d-a7e5-8ffbb89fad6f/observations/quadrat_repeat[14],SavMon_LW_Plot_46,quadrat_number = 14
+Q04,error,Additional species indicated but none recorded,uuid:9ec95900-d4e8-4825-be75-07834b98cc6c/observations/quadrat_repeat[20],SavMon_LW_Plot_19,quadrat_number = 20
+Q04,error,Additional species indicated but none recorded,uuid:fdf5f121-0a7f-4769-85bb-4717e0361eb4/observations/quadrat_repeat[8],SavMon_LW_Plot_14,quadrat_number = 8
+Q04,error,Additional species indicated but none recorded,uuid:3865525f-1d45-40fc-83ca-7e30fafe6b54/observations/quadrat_repeat[9],SavMon_LW_Plot_10,quadrat_number = 9
+Q04,error,Additional species indicated but none recorded,uuid:c17516f9-53dd-4fda-b4e6-e257068198b9/observations/quadrat_repeat[14],SavMon_LW_Plot_30,quadrat_number = 14
+T01,error,Additional-species record without a species,uuid:c4ea3469-7e1c-474a-9ce6-fc1926e590e2/observations/quadrat_repeat[6]/additional_species_repeat[5],SavMon_LW_Plot_28,source = nan
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_16,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_16,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_16,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_094,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_21,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_18,
+T02,warning,Provisional species not yet identified,herb_100,SavMon_LW_Plot_18,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_18,
+T02,warning,Provisional species not yet identified,herb_076,SavMon_LW_Plot_18,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_18,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_11,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_11,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_29,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_29,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_25,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_25,
+T02,warning,Provisional species not yet identified,herb_076,SavMon_LW_Plot_25,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_058,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_094,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_097,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_068,SavMon_LW_Plot_04,
+T02,warning,Provisional species not yet identified,herb_094,SavMon_LW_Plot_07,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_07,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_07,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_07,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_07,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_15,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_24,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_02,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_28,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_28,
+T02,warning,Provisional species not yet identified,herb_086,SavMon_LW_Plot_28,
+T02,warning,Provisional species not yet identified,herb_087,SavMon_LW_Plot_28,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_01,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_01,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_13,
+T02,warning,Provisional species not yet identified,herb_038,SavMon_LW_Plot_13,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_13,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_061,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_037,SavMon_LW_Plot_17,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_06,
+T02,warning,Provisional species not yet identified,herb_076,SavMon_LW_Plot_06,
+T02,warning,Provisional species not yet identified,herb_078,SavMon_LW_Plot_06,
+T02,warning,Provisional species not yet identified,herb_082,SavMon_LW_Plot_06,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_46,
+T02,warning,Provisional species not yet identified,herb_034,SavMon_LW_Plot_19,
+T02,warning,Provisional species not yet identified,herb_034,SavMon_LW_Plot_27,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_27,
+T02,warning,Provisional species not yet identified,herb_072,SavMon_LW_Plot_27,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_26,
+T02,warning,Provisional species not yet identified,herb_068,SavMon_LW_Plot_26,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_26,
+T02,warning,Provisional species not yet identified,herb_038,SavMon_LW_Plot_26,
+T02,warning,Provisional species not yet identified,herb_066,SavMon_LW_Plot_05,
+T02,warning,Provisional species not yet identified,herb_056,SavMon_LW_Plot_09,
+T02,warning,Provisional species not yet identified,herb_058,SavMon_LW_Plot_09,
+T02,warning,Provisional species not yet identified,herb_033,SavMon_LW_Plot_09,
+T02,warning,Provisional species not yet identified,herb_061,SavMon_LW_Plot_09,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_14,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_14,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_10,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_30,
+T02,warning,Provisional species not yet identified,herb_045,SavMon_LW_Plot_30,
+T02,warning,Provisional species not yet identified,herb_042,SavMon_LW_Plot_30,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_026,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_036,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_037,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_038,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_039,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_042,SavMon_LW_Plot_03,
+T02,warning,Provisional species not yet identified,herb_033,SavMon_LW_Plot_22,
+T02,warning,Provisional species not yet identified,herb_026,SavMon_LW_Plot_22,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_22,
+T02,warning,Provisional species not yet identified,herb_034,SavMon_LW_Plot_22,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_12,
+T02,warning,Provisional species not yet identified,herb_017,SavMon_LW_Plot_12,
+T02,warning,Provisional species not yet identified,herb_026,SavMon_LW_Plot_12,
+T02,warning,Provisional species not yet identified,herb_030,SavMon_LW_Plot_12,
+T02,warning,Provisional species not yet identified,herb_002,SavMon_LW_Plot_08,
+T02,warning,Provisional species not yet identified,herb_010,SavMon_LW_Plot_08,
+T02,warning,Provisional species not yet identified,herb_011,SavMon_LW_Plot_08,
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_16,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Justicia divaricata,SavMon_LW_Plot_16,"match_type = HIGHERRANK, gbif_canonical = Acanthaceae"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_21,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_21,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_21,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_21,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_18,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Zornia glochidiala,SavMon_LW_Plot_18,"match_type = FUZZY, gbif_canonical = Zornia glochidiata"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_18,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria sphaerocarpa,SavMon_LW_Plot_18,"match_type = FUZZY, gbif_canonical = Crotalaria sphaerocarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_11,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_11,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Brachiara dura,SavMon_LW_Plot_18,"match_type = FUZZY, gbif_canonical = Brachiaria dura"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria heidmannii,SavMon_LW_Plot_29,"match_type = FUZZY, gbif_canonical = Crotalaria heidmannii"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_29,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria sphaerocarpa,SavMon_LW_Plot_29,"match_type = FUZZY, gbif_canonical = Crotalaria sphaerocarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_25,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Zornia glochidiala,SavMon_LW_Plot_25,"match_type = FUZZY, gbif_canonical = Zornia glochidiata"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria sphaerocarpa,SavMon_LW_Plot_25,"match_type = FUZZY, gbif_canonical = Crotalaria sphaerocarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_25,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_25,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_04,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_04,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Tragus racemosa,SavMon_LW_Plot_04,"match_type = FUZZY, gbif_canonical = Tragus racemosus"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria pisicarpa,SavMon_LW_Plot_04,"match_type = FUZZY, gbif_canonical = Crotalaria pisicarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_07,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea chloroneura,SavMon_LW_Plot_15,"match_type = FUZZY, gbif_canonical = Ipomoea chloroneura"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea leucanthemum,SavMon_LW_Plot_15,"match_type = FUZZY, gbif_canonical = Ipomoea leucanthemum"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_15,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Brachiara dura,SavMon_LW_Plot_15,"match_type = FUZZY, gbif_canonical = Brachiaria dura"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_15,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea chloroneura,SavMon_LW_Plot_20,"match_type = FUZZY, gbif_canonical = Ipomoea chloroneura"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_20,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_20,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_20,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea chloroneura,SavMon_LW_Plot_24,"match_type = FUZZY, gbif_canonical = Ipomoea chloroneura"
+T03,warning,Free-text name has no exact species match in GBIF,Brachiara dura,SavMon_LW_Plot_24,"match_type = FUZZY, gbif_canonical = Brachiaria dura"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea chloroneura,SavMon_LW_Plot_02,"match_type = FUZZY, gbif_canonical = Ipomoea chloroneura"
+T03,warning,Free-text name has no exact species match in GBIF,Brachiara dura,SavMon_LW_Plot_02,"match_type = FUZZY, gbif_canonical = Brachiaria dura"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_02,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_02,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_02,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_28,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_28,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_01,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_01,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_01,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_13,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_17,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_17,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria pisicarpa,SavMon_LW_Plot_17,"match_type = FUZZY, gbif_canonical = Crotalaria pisicarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_06,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_06,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_06,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria platysepala,SavMon_LW_Plot_06,"match_type = FUZZY, gbif_canonical = Crotalaria platysepala"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_46,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Cenchrus bifloris,SavMon_LW_Plot_46,"match_type = FUZZY, gbif_canonical = Cenchrus biflorus"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_19,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_19,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria pisicarpa,SavMon_LW_Plot_26,"match_type = FUZZY, gbif_canonical = Crotalaria pisicarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_05,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_05,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea sinensis,SavMon_LW_Plot_05,"match_type = FUZZY, gbif_canonical = Ipomoea sinensis"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_09,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Justicia divaricata,SavMon_LW_Plot_09,"match_type = HIGHERRANK, gbif_canonical = Acanthaceae"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_09,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_10,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_10,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Hibiscuc sidiformis,SavMon_LW_Plot_10,"match_type = FUZZY, gbif_canonical = Hibiscus sidiformis"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_30,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_03,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria pisicarpa,SavMon_LW_Plot_22,"match_type = FUZZY, gbif_canonical = Crotalaria pisicarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_22,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria heidmannii,SavMon_LW_Plot_12,"match_type = FUZZY, gbif_canonical = Crotalaria heidmannii"
+T03,warning,Free-text name has no exact species match in GBIF,Ipomea dichroa,SavMon_LW_Plot_12,"match_type = FUZZY, gbif_canonical = Ipomoea dichroa"
+T03,warning,Free-text name has no exact species match in GBIF,Oldenladia corymbosa,SavMon_LW_Plot_12,"match_type = FUZZY, gbif_canonical = Oldenlandia corymbosa"
+T03,warning,Free-text name has no exact species match in GBIF,Polygalaerioptera,SavMon_LW_Plot_12,"match_type = FUZZY, gbif_canonical = Polygala erioptera"
+T03,warning,Free-text name has no exact species match in GBIF,Leucas tettenesis,SavMon_LW_Plot_12,"match_type = FUZZY, gbif_canonical = Leucas tettensis"
+T03,warning,Free-text name has no exact species match in GBIF,Melosperma bracteatum,SavMon_LW_Plot_12,"match_type = HIGHERRANK, gbif_canonical = Melosperma"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria sphaerocarpa,SavMon_LW_Plot_08,"match_type = FUZZY, gbif_canonical = Crotalaria sphaerocarpa"
+T03,warning,Free-text name has no exact species match in GBIF,Duosperma cretanum,SavMon_LW_Plot_08,"match_type = FUZZY, gbif_canonical = Duosperma crenatum"
+T03,warning,Free-text name has no exact species match in GBIF,Crotolaria pisicarpa,SavMon_LW_Plot_08,"match_type = FUZZY, gbif_canonical = Crotalaria pisicarpa"
+T06,warning,Woody species recorded in the herbaceous survey,Rhus tenuinervis,SavMon_LW_Plot_26,id_note = woody but below 40cm so should be excluded

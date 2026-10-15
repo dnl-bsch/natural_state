@@ -1,0 +1,7 @@
+__id,label,choice_name,choice_status,first_name,family_name,affiliation,__createdAt,__creatorId,__creatorName,__updates,__updatedAt,__version
+6cf2cf07-1005-47a3-925d-3d5ac90f72f4,Kelvin,Kelvin_Otieno,active,Kelvin,Otieno,Acacia_Trust,2026-05-19T18:36:50.048Z,191,admin3@example.org,1,2026-05-21T17:17:01.156Z,2
+1bddc7d5-e01b-4155-b940-2e7a5a2deed0,Erik,Erik_Johansson,active,Erik,Johansson,Acacia_Trust,2026-05-15T09:14:36.581Z,2684,svc-api@example.org,0,,1
+3d8e9574-9d4d-4af3-90dd-bd381203f80a,Sam,Samuel_Kiprotich,active,Samuel,Kiprotich,Acacia_Trust,2026-05-15T09:14:36.581Z,2684,svc-api@example.org,0,,1
+32c9ea24-1a8d-41d6-8f2e-4a94b08ffacc,Grace,Grace_Achieng,active,Grace,Achieng,Natural_State,2026-05-15T09:14:36.580Z,2684,svc-api@example.org,0,,1
+69eaf9dd-2138-4048-b18d-df95d9cb6411,Wanjiku,Faith_Wanjiku_Naliaka,active,Faith_Wanjiku,Naliaka,Acacia_Trust,2026-05-15T09:14:36.580Z,2684,svc-api@example.org,0,,1
+de30f3c5-5f70-4f87-b9c7-a8cf6919daca,Dan,Daniel_Dan_Mwangi,active,Daniel,Mwangi,Acacia_Trust,2026-05-15T09:14:36.580Z,2684,svc-api@example.org,0,,1

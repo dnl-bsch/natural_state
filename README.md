@@ -24,23 +24,12 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 ```
 
-The data are not part of the repository. Place the raw files like this:
-
-```text
-data/raw/birds/birdnet_predictions.csv
-data/raw/birds/validation_results.csv
-data/raw/vegetation/ODK Data Exports/...
-data/raw/vegetation/Entity lists/...
-```
+For easier review of the project, the `data/` folder (about 13 MB, raw inputs and generated outputs) is committed to the repository.
 
 ## Vegetation
 
 The analysis is the notebook `notebooks/vegetation.ipynb`. Open it in Jupyter or VS Code with the
-`natural-state` kernel and run all cells, or run the paired script from the repository root:
-
-```bash
-MPLBACKEND=Agg uv run python notebooks/vegetation.py
-```
+`natural-state` kernel and run all cells.
 
 The GBIF name check calls the GBIF web service, so this step needs an internet connection.
 

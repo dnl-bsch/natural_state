@@ -1,0 +1,6 @@
+__id,label,choice_name,choice_status,__createdAt,__creatorId,__creatorName,__updates,__updatedAt,__version
+a4648dbf-9f74-4932-85c8-860b8637febe,Aircraft,aircraft,inactive,2026-05-15T09:14:37.774Z,2684,svc-api@example.org,0,,1
+aedd3570-8bdc-4e95-a26f-ba846cdc09ac,Foot,foot,active,2026-05-15T09:14:37.774Z,2684,svc-api@example.org,0,,1
+7bf679db-e69c-41a0-b5d4-607481d8e6fc,Mokoro,mokoro,active,2026-05-15T09:14:37.774Z,2684,svc-api@example.org,0,,1
+07120fd0-0cc0-4acc-bd4d-ae7efa56a8dd,Motorbike,motorbike,inactive,2026-05-15T09:14:37.774Z,2684,svc-api@example.org,0,,1
+8f2c4e19-bf36-4482-a15b-1464fa64ee6b,Vehicle,vehicle,active,2026-05-15T09:14:37.774Z,2684,svc-api@example.org,0,,1

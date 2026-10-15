@@ -1,0 +1,32 @@
+plot_name,plot_status,is_viable,midpoint_shift_m,a_to_mid_m,b_to_mid_m,bearing_deg,surveys,valid_surveys,observed_richness,mean_richness_per_quadrat,flags
+SavMon_LW_Plot_01,primary,yes,11.41,32.747,30.572,130.496,1.0,1.0,31.0,4.45,P04
+SavMon_LW_Plot_02,primary,yes,13.255,26.883,34.943,102.585,1.0,1.0,18.0,2.5,P04
+SavMon_LW_Plot_03,primary,yes,5.309,36.992,20.771,106.81,1.0,1.0,15.0,2.15,"P03, P04"
+SavMon_LW_Plot_04,primary,yes,5.678,26.156,27.725,109.422,1.0,1.0,20.0,2.6,P04
+SavMon_LW_Plot_05,primary,yes,19.89,27.128,20.165,116.467,1.0,1.0,16.0,2.15,P04
+SavMon_LW_Plot_06,primary,yes,4.294,25.065,23.445,106.044,1.0,1.0,24.0,3.95,P04
+SavMon_LW_Plot_07,primary,yes,5.938,33.807,20.26,85.363,1.0,1.0,18.0,3.75,P04
+SavMon_LW_Plot_08,primary,yes,5.621,22.503,27.675,111.798,1.0,1.0,26.0,5.15,P04
+SavMon_LW_Plot_09,primary,yes,5.354,26.951,19.548,78.006,1.0,1.0,27.0,4.5,P04
+SavMon_LW_Plot_10,primary,yes,10.104,27.596,30.314,109.055,1.0,1.0,21.0,3.4,P04
+SavMon_LW_Plot_11,primary,yes,11.517,27.238,20.938,107.787,1.0,1.0,25.0,3.6,P04
+SavMon_LW_Plot_12,primary,yes,12.117,11.386,30.548,122.66,1.0,1.0,33.0,5.25,"P03, P04"
+SavMon_LW_Plot_13,primary,yes,13.926,39.664,20.703,78.487,1.0,1.0,12.0,3.3,"P03, P04"
+SavMon_LW_Plot_14,primary,yes,33.534,10.786,33.473,90.718,1.0,1.0,17.0,3.9,"P02, P03, P04"
+SavMon_LW_Plot_15,primary,yes,15.073,46.495,23.164,95.763,1.0,1.0,21.0,2.0,"P03, P04"
+SavMon_LW_Plot_16,primary,yes,3.514,33.134,25.267,100.311,1.0,1.0,23.0,4.5,P04
+SavMon_LW_Plot_17,primary,yes,23.767,19.466,33.294,81.954,1.0,1.0,22.0,3.8,P04
+SavMon_LW_Plot_18,primary,yes,2.583,25.017,20.758,113.499,2.0,1.0,28.0,3.6,P04
+SavMon_LW_Plot_19,primary,yes,3.624,14.89,8.131,60.24,1.0,1.0,19.0,2.7,"P03, P04"
+SavMon_LW_Plot_20,primary,yes,4.597,21.924,24.663,104.825,1.0,1.0,17.0,2.8,P04
+SavMon_LW_Plot_21,primary,yes,13.795,18.437,27.556,97.709,2.0,1.0,30.0,4.65,P04
+SavMon_LW_Plot_22,primary,yes,17.692,23.119,47.264,49.846,1.0,1.0,20.0,3.2,"P03, P04"
+SavMon_LW_Plot_23,primary,no,,,,,,,,,P01
+SavMon_LW_Plot_24,primary,yes,6.148,25.828,26.339,93.052,1.0,1.0,11.0,1.9,P04
+SavMon_LW_Plot_25,primary,yes,2.618,22.892,20.021,96.241,1.0,1.0,31.0,4.2,P04
+SavMon_LW_Plot_26,primary,yes,7.711,19.716,30.978,112.523,1.0,1.0,23.0,3.2,P04
+SavMon_LW_Plot_27,primary,yes,20.221,29.266,3.937,56.574,1.0,1.0,22.0,3.65,"P03, P04"
+SavMon_LW_Plot_28,primary,yes,1.194,15.301,25.031,117.731,1.0,1.0,22.0,3.1,P04
+SavMon_LW_Plot_29,primary,yes,8.283,30.495,32.433,104.853,1.0,1.0,24.0,4.25,P04
+SavMon_LW_Plot_30,primary,yes,14.475,40.467,12.388,109.866,1.0,1.0,24.0,4.05,"P03, P04"
+SavMon_LW_Plot_46,backup,yes,6.186,23.173,23.547,101.649,1.0,1.0,8.0,2.05,P04
